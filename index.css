@@ -1,0 +1,21 @@
+.wrapper {
+    max-width: $wrapper_max_w;
+    margin: auto;
+    padding-left: 20rem;
+    padding-right: 20rem;
+    
+    @media #{$media_xxl} {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    
+    @media #{$media_xl} {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    
+    @media #{$media_sm} {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}

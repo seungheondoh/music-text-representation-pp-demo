@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charSet="UTF-8" />
+        <title>SeungHeon Doh | MIR, ML/DL Researcher</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎹</text></svg>"></link>
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="robots" content="index, follow, noodp" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="google" content="notranslate" />
+        <meta name="format-detection" content="telephone=no" />
+        <title>SeungHeonDoh</title>
+    </head>
+    <style>
+        header{        
+            padding-top: 1.91rem;
+        }
+        header a{
+            color: gray !important;
+            text-decoration: none;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "helvetica";
+            margin-bottom: 1.01rem;
+        }
+
+        p{
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        small{
+            font-size: 0.8rem;
+        }
+        b{
+            color: blue;
+        }
+        h1 {
+            font-size: 5rem;
+            line-height: 1.15;
+            }
+
+        h2 {
+            font-size: 4rem;
+            line-height: 1.11;
+        }
+
+        h3 {
+            font-size: 2rem;
+            line-height: 1.74;
+        }
+
+        h4 {
+            font-size: 1.4rem;
+            line-height: 1.39;
+        }
+
+        h5 {
+            font-size: 1.2rem;
+            line-height: 1.56;
+            margin-bottom: 0.5em;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.56;
+            margin-bottom: 1.01rem;
+        }
+
+        .main table {
+            display: inline-table;
+        }
+        table {
+            table-layout:fixed;
+            width: 100%;
+            overflow: hidden;
+        }
+        #player{
+            width: 100%;
+        }
+        img, svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .blog_contents{
+            margin-bottom: 1rem;
+        }
+
+        .footer{
+            height: 50px;
+            background-color: white;
+        }
+
+        .wrapper {
+            max-width: 1920px;
+            margin: auto;
+            padding-left: 20rem;
+            padding-right: 20rem;
+            }
+        @media(max-width: 1700px){
+            .wrapper {
+                padding-left: 8rem;
+                padding-right: 8rem;
+            }
+            }
+
+        @media(max-width: 1199px){
+            .wrapper {
+            padding-left: 5rem;
+            padding-right: 5rem;
+            }
+        }
+
+        @media(max-width: 575px){
+            .wrapper {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+            }
+        }
+    </style>
+
+    <body style="background-color: #f8f8f8;">
+        <header id="header" class="site-header">
+            <div class="wrapper">
+                <a 
+                    title="nav"
+                    class="btn btn-link transform-scale-h border-0 p-0"
+                    href="https://seungheondoh.github.io/#/">Home</a>
+            </div>
+        </header>
+    
+        <main id="main" class="site-main">
+            <div class="wrapper">
+                <h3>TTMR++: Enriching Music Descriptions with a Finetuned-LLM and Metadata for Text-to-Music Retrieval</h3>
+                    <pre><code>Enriching Music Descriptions with a Finetuned-LLM and Metadata for Text-to-Music Retrieval, ICASSP 2024 (submitted) - SeungHeon Doh, Minhee Lee, Dasaem Jeong, Juhan Nam
+                    </code></pre>
+            <p>This project maps <strong>text {tag, caption, metadata}</strong> and <strong>music</strong> to the same embedding space.
+                For the details of the methodology for building the dataset, please refer to our paper.</p>
+            <ul>
+                <!-- <li><a href="">Paper on Arxiv</a>(will be updated)</li> -->
+                <li><a href="#">Paper on Arxiv</a></li>
+                <li><a href="#">Implementation Code</a></li>
+                <li><a href="#">Dataset Code</a></li>
+            </ul>
+
+            <h4>Abstract</h4>
+            <p>
+                Text-to-Music Retrieval, finding music based on a given natural language query, plays a pivotal role in content discovery within extensive music databases. To address this challenge, prior research has predominantly focused on a joint embedding of music audio and text, utilizing it to retrieve music tracks that exactly match descriptive queries related to musical attributes (i.e. genre, instrument) and contextual elements (i.e. mood, theme). However, users also articulate a need to explore music that shares similarities with their favorite tracks or artists, such as \textit{I need a similar track to Superstition by Stevie Wonder}. To address these concerns, this paper proposes an improved Text-to-Music Retrieval model, denoted as \textbf{TTMR++}, which utilizes rich text descriptions generated with a finetuned large language model and metadata. To accomplish this, we obtained various types of seed text from several existing music tag and caption datasets and a knowledge graph dataset of artists and tracks. The experimental results show the effectiveness of TTMR++ in comparison to state-of-the-art music-text joint embedding models through a comprehensive evaluation involving various musical text queries.
+            </p>
+            <img class="blog_contents" src="assets/img/mainfigure.png" alt="text_to_music"/> 
+        </main>
+        <div class="footer"></div>
+            </div>
+    </body>
+</html>
