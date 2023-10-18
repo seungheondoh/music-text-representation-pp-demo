@@ -35,9 +35,6 @@
         small{
             font-size: 0.8rem;
         }
-        b{
-            color: blue;
-        }
         h1 {
             font-size: 5rem;
             line-height: 1.15;
@@ -83,6 +80,15 @@
         img, svg {
             max-width: 100%;
             height: auto;
+        }
+
+        .query{
+            font-family: Georgia, "Times New Roman", serif;
+            font-style: italic;
+        }
+
+        .blue{
+            color: blue;
         }
 
         .blog_contents{
@@ -139,9 +145,9 @@
                     <pre><code>SeungHeon Doh, Minhee Lee, Dasaem Jeong, Juhan Nam</code></pre>                    
             <ul>
                 <!-- <li><a href="">Paper on Arxiv</a>(will be updated)</li> -->
-                <li><a href="#">Paper on Arxiv</a></li>
-                <li><a href="#">Implementation Code</a></li>
-                <li><a href="#">Dataset Code</a></li>
+                <li><a href="#">Paper on Arxiv (Update after review process)</a></li>
+                <li><a href="#">Implementation Code (Update after review process)</a></li>
+                <li><a href="#">Dataset Code (Update after review process)</a></li>
             </ul>
 
             <h4>Abstract</h4>
@@ -149,6 +155,80 @@
                 Text-to-Music Retrieval, finding music based on a given natural language query, plays a pivotal role in content discovery within extensive music databases. To address this challenge, prior research has predominantly focused on a joint embedding of music audio and text, utilizing it to retrieve music tracks that exactly match descriptive queries related to musical attributes (i.e. genre, instrument) and contextual elements (i.e. mood, theme). However, users also articulate a need to explore music that shares similarities with their favorite tracks or artists, such as \textit{I need a similar track to Superstition by Stevie Wonder}. To address these concerns, this paper proposes an improved Text-to-Music Retrieval model, denoted as \textbf{TTMR++}, which utilizes rich text descriptions generated with a finetuned large language model and metadata. To accomplish this, we obtained various types of seed text from several existing music tag and caption datasets and a knowledge graph dataset of artists and tracks. The experimental results show the effectiveness of TTMR++ in comparison to state-of-the-art music-text joint embedding models through a comprehensive evaluation involving various musical text queries.
             </p>
             <img class="blog_contents" src="assets/img/mainfigure.png" alt="text_to_music"/> 
+
+            <h4>Testset Demo</h4>
+            <p>🌟 "In order to substantiate the model's prowess in generalization, we meticulously curated a testset from a dazzling array of 2.8k samples sourced from the music caption evaluation split. This demonstration is set to unveil the dynamic interplay of semantic captions, tags, and artist conditions in a riveting search scenario. Moreover, we are delighted to present comprehensive annotations for the music captions." 🎶</p>
+            <br/><br/>
+            <hr/>
+            <p class="query">Query: The main soundtrack of an arcade game. It is fast-paced and upbeat, with a catchy electric guitar riff. The music is repetitive and easy to remember, but with unexpected sounds, like cymbal crashes or drum rolls</p>
+            <table>
+                <tr>
+                    <th> Similar Music 1 </th>
+                    <th> Similar Music 2 </th>
+                    <th> Similar Music 3 </th>
+                </tr>
+                <tr> 
+                    <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ttmrpp/sound_track.wav" type="audio/mpeg"></audio> </th>
+                    <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ttmrpp/sound_track (1).wav" type="audio/mpeg"></audio> </th>
+                    <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ttmrpp/sound_track (2).wav" type="audio/mpeg"></audio> </th>
+                </tr>
+                <tr> 
+                    <th> <small>This instrumental funk song is a low quality recording. This song starts off with a bass playing a funky and groovy lick accompanied by a percussion playing a fill. Then a synth plays a lead using string sounds. This is accompanied by distortion guitars playing power chords. The bass continues to play funky fills and the percussion continues to play a fast beat. This song can be played in an action sequence in a movie</small> </th>
+                    <th> <small>The epic music excerpt starts off full force with an orchestral ensemble playing loud blocks of sound. The taiko drums play with the same rhythm the orchestra does. After a few seconds the volume is dialed down and one can hear a melody being created from electronic sounds and possibly a bass guitar. In the background a metallic percussive instrument is being played with bare hands</small> </th>
+                    <th> <small>The low quality recording features a manically played piano melody over punchy kick and snare hits, followed by uptempo hi hats and shimmering open hats. It sounds aggressive, mani and thin, as it lacks low frequencies</small> </th>
+                </tr>
+            </table>
+
+            <hr/>
+            
+            <br/><br/><br/>
+
+            <hr/>
+            <p class="query">Qeruy: funk song with female vocal, similar with Herbie Hancook style'</p>
+            <table>
+                <tr>
+                    <th> Similar Music 1 </th>
+                    <th> Similar Music 2 </th>
+                    <th> Similar Music 3 </th>
+                </tr>
+                <tr> 
+                    <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ttmrpp/herbie.wav" type="audio/mpeg"></audio> </th>
+                    <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ttmrpp/herbie (1).wav" type="audio/mpeg"></audio> </th>
+                    <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ttmrpp/herbie (2).wav" type="audio/mpeg"></audio> </th>
+                </tr>
+                <tr> 
+                    <th> <small>The song feels funky and soulful. There's a rumbling funky bassline, and an electric guitar playing intermittent licks. The drumming sticks on the hi-hats for the feeling of a build-up;. The female vocalist has a powerful, soulful voice.</small> </th>
+                    <th> <small>The Funk song features a flat male vocal singing over widely spread, funky electric guitar chords, groovy bass guitar and energetic drums. It gives off happy and fun vibes, as it is probably very good for dancing with your friends <br/> <span class="blue">(While the annotation may have some imperfections, Our retrieval results flawlessly pinpoint 'female vocals')</span></small> </th>
+                    <th> <small>The female voice is singing in the mid range and with delay and reverb on her voice. The bass is playing long notes ... The drums are playing a rather complex groove. An e-guitar is playing single notes contributing to the rhythm while another guitar is playing an almost looped melody on top.... Synthesizer hits and keys are adding more little elements...</small> </th>
+                </tr>
+            </table>
+            <hr/>
+
+            <br/><br/><br/>
+
+            <hr/>
+            <p class="query">Query: melodic techno</p>
+            <table>
+                <tr>
+                    <th> Similar Music 1 </th>
+                    <th> Similar Music 2 </th>
+                    <th> Similar Music 3 </th>
+                </tr>
+                <tr> 
+                    <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ttmrpp/techno.wav" type="audio/mpeg"></audio> </th>
+                    <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ttmrpp/techno (1).wav" type="audio/mpeg"></audio> </th>
+                    <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ttmrpp/techno (2).wav" type="audio/mpeg"></audio> </th>
+                </tr>
+                <tr> 
+                    <th> <small>The drums are playing a four on the floor techno rhythm with hihats and a strong kick. A synthetic bass follows the kick with almost just a single note playing. Panned to the left and right side of the speakers you can hear a monotone, repeating synth melody. This song may be playing in a technoclub</small> </th>
+                    <th> <small>This is an EDM/techno music piece with a loud synth lead. There is a strong bass and an upbeat electronic drum beat in the background creating an atmosphere of high energy which is essential to electronic dance music. This music could be used in nightclubs, techno DJ sets and EDM venues</small> </th>
+                    <th> <small>This song contains a lot of different synthesizer sounds. One is playing a lead melody in a higher register while two others are playing a rhythmic repeating melody in the mid and low register. This song may be playing in a club</small> </th>
+                </tr>
+            </table>
+            <hr/>
+            
+
+                
         </main>
         <div class="footer"></div>
             </div>
