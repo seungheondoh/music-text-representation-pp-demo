@@ -160,7 +160,7 @@
             <p>🌟 "In order to substantiate the model's prowess in generalization, we used a testset of 2.8k samples sourced from the MusicCaps evaluation split. This demonstration is set to unveil the dynamic interplay of semantic captions, tags, and artist conditions in a riveting retrieval scenario. Moreover, we present original music caption annotations." 🎶</p>
             <br/><br/>
             <hr/>
-            <p class="query">Query: The main soundtrack of an arcade game. It is fast-paced and upbeat, with a catchy electric guitar riff. The music is repetitive and easy to remember, but with unexpected sounds, like cymbal crashes or drum rolls</p>
+            <p class="query">Caption Query: The main soundtrack of an arcade game. It is fast-paced and upbeat, with a catchy electric guitar riff. The music is repetitive and easy to remember, but with unexpected sounds, like cymbal crashes or drum rolls</p>
             <table>
                 <tr>
                     <th> Similar Music 1 </th>
@@ -180,11 +180,34 @@
             </table>
 
             <hr/>
-            
             <br/><br/><br/>
 
             <hr/>
-            <p class="query">Qeruy: funk song with female vocal, similar with Herbie Hancook style'</p>
+            <p class="query">Artist Query: similar with artist Oasis</p>
+            <table>
+                <tr>
+                    <th> Similar Music 1 </th>
+                    <th> Similar Music 2 </th>
+                    <th> Similar Music 3 </th>
+                </tr>
+                <tr> 
+                    <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ttmrpp/oasis.wav" type="audio/mpeg"></audio> </th>
+                    <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ttmrpp/oasis (1).wav" type="audio/mpeg"></audio> </th>
+                    <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ttmrpp/oasis (2).wav" type="audio/mpeg"></audio> </th>
+                </tr>
+                <tr> 
+                    <th> <small>A male vocalist sings this simple melody. The tempo is medium with a pleasant keyboard harmony, slick drumming, steady bass lines and an melodic electric guitar harmony. The song is a simple, insistent rhythm,recurring beat, youthful , emotional, sentimental and passionate classic Pop.</small> </th>
+                    <th> <small>This is an alternative rock piece. There is a male vocal singing gently and melodically at the forefront in the medium range, while a male back vocal can be heard singing at a higher pitch. A clean sounding electric guitar is playing a mellow tune with a bass guitar holding the root notes in the background. The acoustic drums are playing a basic rock beat. There is an easygoing aura to it. This piece could be used in a food/beverage commercial. It could also be playing at a sports venue</span></small> </th>
+                    <th> <small>A male vocalist sings this vigorous heavy metal song. The tempo is fast with intense  electric guitar lead ,hard hitting drumming, steady bass lines, keyboard harmony and vocal backup. There is a sound of racing cars at the onset of the song followed by a vigorous male vocal harmony. The song is energetic, enthusiastic, gripping, intense, vital and youthful. This song is Heavy Metal.</small> </th>
+                </tr>
+            </table>
+            <hr/>
+
+
+            <br/><br/><br/>
+
+            <hr/>
+            <p class="query">Blending Query: funk song with female vocal, similar with Herbie Hancook style'</p>
             <table>
                 <tr>
                     <th> Similar Music 1 </th>
@@ -207,7 +230,7 @@
             <br/><br/><br/>
 
             <hr/>
-            <p class="query">Query: melodic techno</p>
+            <p class="query">Tag Query: melodic techno</p>
             <table>
                 <tr>
                     <th> Similar Music 1 </th>
